@@ -12,7 +12,7 @@ with st.expander('Data'):
 
 
   st.write('**X**')
-  X= df.drop('species'. axis=1)
+  X= df.drop('species', axis=1)
   X
 
   st.write('**y**')
