@@ -19,9 +19,6 @@ with st.expander('Data'):
   y_raw=df.species
   y_raw
 
-with st.expander('Data Visualization'): 
-  st.scatter_chart(data=df,x='bill_length_mm' , y='body_mass_g',color='species')
-
 #data preparation
 with st.sidebar:
   st.header('Input Features')
@@ -33,6 +30,8 @@ with st.sidebar:
   body_mass_g = st.slider('Body mass (g)', 2700.0, 6300.0, 4207.0)
   gender = st.selectbox('Gender', ('male', 'female'))
 
+with st.expander('Data Visualization'): 
+  st.scatter_chart(data=df,x='bill_length_mm' , y='body_mass_g',color='species')
 
 # Create a DataFrame for the input features
 data = {'island': island,
